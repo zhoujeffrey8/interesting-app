@@ -6,13 +6,13 @@
   <title>Food Tracker</title>
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="576040430695-2oj6mc76mgeqhubiljl5ommt7cqho1f0.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 
     <meta name="author" content="Joe">
 
@@ -22,7 +22,7 @@
 
     <script></script><!--for js code you don't want to put in the js file-->
 
-  </head> 
+  </head>
   <body>
     <header>
       <h1>Food Tracker App</h1>
@@ -31,12 +31,11 @@
     <nav>
     </nav>
 
-  <div class="flex-container">
-    <a href="foodsearch.html">
-    <button type="button">Add Food</button>
-  </a>
-
-  </div>
+    <div class="flex-container">
+      <a href="pages/food-search.html">
+        <button type="button">Add Food</button>
+      </a>
+    </div>
 
     <h1 id="testText">Test Header</h1>
 
@@ -58,11 +57,11 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
 
-        document.querySelector('#content').innerText = googleUser.getBasicProfile().getName(); 
+        document.querySelector('#content').innerText = googleUser.getBasicProfile().getName();
       }
       function signOut() {
         gapi.auth2.getAuthInstance().signOut().then(function() {
-          console.log('signed out') 
+          console.log('signed out')
 
         document.querySelector('#content').innerText = " "
         })
@@ -94,9 +93,9 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
 
-      var textText = document.getElementById('testText'); 
-      var dbRef = firebase.database().ref().child('text'); 
-      dbRef.on('value', snap => testText.innerText = snap.val());  
+      var textText = document.getElementById('testText');
+      var dbRef = firebase.database().ref().child('text');
+      dbRef.on('value', snap => testText.innerText = snap.val());
 
     </script>
     </body>
