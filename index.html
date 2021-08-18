@@ -22,7 +22,7 @@
 
     <script></script><!--for js code you don't want to put in the js file-->
 
-  </head> 
+  </head>
   <body>
     <header>
       <h1>Food Tracker App</h1>
@@ -32,7 +32,10 @@
     </nav>
 
   <div class="flex-container">
-    <button type="button">Add Food</button>
+
+    <form action="foodsearch.html">
+        <input type="submit" value="Add Food" />
+    </form>
 
   </div>
 
@@ -56,11 +59,11 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
 
-        document.querySelector('#content').innerText = googleUser.getBasicProfile().getName(); 
+        document.querySelector('#content').innerText = googleUser.getBasicProfile().getName();
       }
       function signOut() {
         gapi.auth2.getAuthInstance().signOut().then(function() {
-          console.log('signed out') 
+          console.log('signed out')
 
         document.querySelector('#content').innerText = " "
         })
@@ -92,9 +95,9 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
 
-      var textText = document.getElementById('testText'); 
-      var dbRef = firebase.database().ref().child('text'); 
-      dbRef.on('value', snap => testText.innerText = snap.val());  
+      var textText = document.getElementById('testText');
+      var dbRef = firebase.database().ref().child('text');
+      dbRef.on('value', snap => testText.innerText = snap.val());
 
     </script>
     </body>
