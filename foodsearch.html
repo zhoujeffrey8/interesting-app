@@ -1,1 +1,37 @@
 <!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+	<body>
+		<p>Add Food:</p>
+		<input type="text" id="foodAdd">
+		<button onclick="submitFood()">Submit</button>
+		<div id="lastFood"></div>
+		<button onclick="showLastFood()">Show Last Food</button>
+		<button onclick="removeLastFood()">Remove Last Food</button>
+
+		<script>
+			//has user enter a food that they last ate and stores it in Local storage called lastConsumedFood
+			function submitFood() {
+				localStorage.setItem("lastConsumedFood", document.getElementById("foodAdd").value);
+				showLastFood()
+			}
+			//displays lastConsumedFood
+			function showLastFood() {
+				if (localStorage.getItem("lastConsumedFood") != null){
+					document.getElementById("lastFood").innerHTML = localStorage.getItem("lastConsumedFood"); 
+				}
+				else {
+					document.getElementById("lastFood").innerHTML = "No Last Food"; 
+				}
+			}
+			//removes lastConsumedFood from localStorage
+			function removeLastFood() {
+				localStorage.removeItem("lastConsumedFood"); 
+			}
+		</script>
+
+
+	</body>
+</html>
