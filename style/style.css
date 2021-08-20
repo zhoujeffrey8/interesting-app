@@ -2,9 +2,31 @@ header {
   text-align: center;
 }
 
-.flex-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+
+body{
+	margin: 0px;
 }
+.flex-container {
+  	display: flex;
+  	flex-flow: row wrap;
+  	justify-content: left;
+  	align-items: left;
+}
+
+.information-container{
+	padding: 0px;
+	background-color: #dae1e4; 
+}
+
+.information-content{
+	width: 300px;
+	padding-top: 50px;
+  	padding-left: 200px;
+  	margin: 20px;
+}
+
+.information-font{
+	font: calibri;
+	font-size: 25; 
+}
+
