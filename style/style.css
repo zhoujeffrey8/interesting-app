@@ -6,6 +6,12 @@ header {
 body{
 	margin: 0px;
 }
+
+.logo-text{
+	padding-left: 150px;
+	font: Monaco; 
+	font-size: 50;
+}
 .flex-container {
   	display: flex;
   	flex-flow: row wrap;
@@ -13,7 +19,7 @@ body{
   	align-items: left;
 }
 
-.information-container{
+.grey-container{
 	padding: 0px;
 	background-color: #dae1e4; 
 }
@@ -22,6 +28,7 @@ body{
 	width: 300px;
 	padding-top: 50px;
   	padding-left: 200px;
+  	padding-bottom: 50px;
   	margin: 20px;
 }
 
