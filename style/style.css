@@ -7,18 +7,27 @@ body{
 	margin: 0px;
 }
 
-.nav-buttons{
-  padding-left: 150px;
+.nav-bar{
+  	position: relative;
+  	background-color: #E2E9E9;
+  	overflow: hidden;
 }
 
-#nav-buttons button{
-  display: inline-block;
+.nav-bar a {
+  float: right;
+  color: #191919;
+  text-align: center;
+  padding: 32px 32px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.logo-text{
-	padding-left: 150px;
-	font-family: Arial;
-	font-size: 50px;
+
+#logo-img{
+	float: left;
+	height: auto; 
+    width: auto; 
+    max-height: 80px;
 }
 .flex-container {
   	display: flex;
