@@ -29,12 +29,6 @@ body{
     width: auto; 
     max-height: 80px;
 }
-.flex-container {
-  	display: flex;
-  	flex-flow: row wrap;
-  	justify-content: left;
-  	align-items: left;
-}
 
 .grey-container{
 	padding: 0px;
@@ -47,6 +41,21 @@ body{
 	position: relative;
 	overflow: hidden; 
 	width: 100%;
+}
+
+.second-container{
+	padding: 0px;
+	background-color: #fefefe;
+	overflow: hidden; 
+}
+
+.second-container p{
+	text-align: center;
+	font-weight: bold; 
+	font-family: "Open Sans";
+	color: #121212;  
+	font-size: 50px;
+	padding-top: 75px;  
 }
 
 .information-text-container{
