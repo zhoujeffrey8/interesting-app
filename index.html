@@ -34,22 +34,27 @@
         <a>Apparel</a>
         <a href="pages/main-menu.html">Home</a>
       </div>
-      <div class="information-content">
-        <div class="information-font">
-          this is about our app this is about our appthis is about our appthis is about our appthis is about our appthis is about our appthis is about our appthis is about our appthis is about our appthis is about our appthis is about our appthis is about our appthis is about our app
+      <div class="body-1">
+        <div class="information-text-container">
+          <div class="information-content">
+            <div class="information-header">
+              Find out which foods are supporting your body. 
+            </div>
+            <div class="information-font">
+              Track your gut health for free!
+            </div>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          </div>
+        </div>
+        <div class="cal-img-container">
+          <img id="calendar-img" src="images/calendar.png" width="590" height="508">
         </div>
       </div>
     </div>
-
-    <div class="flex-container">
-      <a href="pages/food-search.html">
-        <button type="button">Add Food</button>
-      </a>
-    </div>
-
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-
-    <button onclick="signOut()">Sign Out</button>
+    <button id="signOutButton" onclick="signOut()">Sign Out</button>
+    <script>
+      document.getElementById("signOutButton").hidden = true; 
+    </script>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -66,12 +71,14 @@
         console.log("ID Token: " + id_token);
 
         document.querySelector('#content').innerText = googleUser.getBasicProfile().getName();
+        document.getElementById("signOutButton").hidden = false;
       }
       function signOut() {
         gapi.auth2.getAuthInstance().signOut().then(function() {
           console.log('signed out')
 
         document.querySelector('#content').innerText = " "
+        document.getElementById("signOutButton").hidden = true; 
         })
       }
     </script>
