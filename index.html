@@ -2,7 +2,7 @@
 <html>
   <head>
 
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Food Tracker</title>
 
 
@@ -27,7 +27,7 @@
 
     <div class="grey-container">
       <div class="nav-bar">
-        <img src="images/logo1.png" width="539" height="161" id="logo-img"> 
+        <img src="images/logo1.png" width="539" height="161" id="logo-img">
         <a>About</a>
         <a>Contact Us</a>
         <a>Meal Plans</a>
@@ -38,7 +38,7 @@
         <div class="information-text-container">
           <div class="information-content">
             <div class="information-header">
-              Find out which foods are supporting your body. 
+              Find out which foods are supporting your body.
             </div>
             <div class="information-font">
               Track your gut health for free!
@@ -57,8 +57,13 @@
       <p>
     </div>
     <button id="signOutButton" onclick="signOut()">Sign Out</button>
+    <div class="footer">
+      <a>Guidelines</a>
+      <a>Cookie Settings</a>
+      <a>Contact Us</a>
+    </div>
     <script>
-      document.getElementById("signOutButton").hidden = true; 
+      document.getElementById("signOutButton").hidden = true;
     </script>
     <script>
       function onSignIn(googleUser) {
@@ -83,7 +88,7 @@
           console.log('signed out')
 
         document.querySelector('#content').innerText = " "
-        document.getElementById("signOutButton").hidden = true; 
+        document.getElementById("signOutButton").hidden = true;
         })
       }
     </script>
@@ -118,6 +123,7 @@
       dbRef.on('value', snap => testText.innerText = snap.val());
 
     </script>
+    
     </body>
 
 </html>
