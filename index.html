@@ -2,7 +2,7 @@
 <html>
   <head>
 
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Food Tracker</title>
 
 
@@ -57,6 +57,11 @@
       <p>
     </div>
     <button id="signOutButton" onclick="signOut()">Sign Out</button>
+    <div class="footer">
+      <a>Guidelines</a>
+      <a>Cookie Settings</a>
+      <a>Contact Us</a>
+    </div>
     <script>
       document.getElementById("signOutButton").hidden = true;
     </script>
@@ -118,11 +123,7 @@
       dbRef.on('value', snap => testText.innerText = snap.val());
 
     </script>
-    <footer>
-      <a>STracker</a>
-      <a>About</a>
-      <a>Contact Us</a>
-    </footer>
+    
     </body>
 
 </html>

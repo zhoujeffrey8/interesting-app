@@ -96,18 +96,18 @@ body{
 	padding-left: 100px;
 	float: left;
 	height: auto;
-  width: auto;
-  max-height: 350px;
-}
-footer {
-  padding: 15px;
-	background-color: #D3D3D3;
-	background-repeat: no-repeat;
-	background-size: cover;
-  text-align: center;
-  justify-content: center;
+  	width: auto;
+  	max-height: 350px;
 }
 
-footer a{
+.footer {
+  	position: fixed;
+  	left: 0;
+  	bottom: 0;
+  	width: 100%
+	background-color: #D3D3D3;
+}
+
+.footer a{
   padding: 15px;
 }
